@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Error - Wiki Admin Portal</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body class="auth-body">
+    <main class="auth-card error-card">
+        <div class="brand">
+            <div class="brand-icon error-icon">!</div>
+            <h1>Login Failed</h1>
+
+            <p class="subtitle error-text" th:text="${error}">Invalid username or password.</p>
+        </div>
+
+        <div class="message-box">
+
+            <p>You entered: <strong th:text="${username}">username</strong></p>
+            <p>Check your Username and Password and try again.</p>
+        </div>
+
+        <a class="secondary-link" th:href="@{/login}">Back to Login</a>
+    </main>
+</body>
+</html>

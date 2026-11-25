@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Wiki Admin Portal</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body class="auth-body">
+    <main class="auth-card success-card">
+        <div class="brand">
+            <div class="brand-icon success-icon">&#10003;</div>
+
+            <h1>Welcome, <span th:text="${username}">Administrator</span>!</h1>
+            <p class="subtitle">You have successfully logged in to the Wiki Admin Portal.</p>
+        </div>
+
+        <div class="message-box">
+            <p>Authentication successful. You now have administrator access to the wiki.</p>
+        </div>
+
+        <a class="secondary-link" th:href="@{/login}">Back to Login</a>
+    </main>
+</body>
+</html>

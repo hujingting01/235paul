@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki Administrator Login</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body class="auth-body">
+    <main class="auth-card">
+
+        <div class="brand">
+            <div class="brand-icon">W</div>
+            <h1>Wiki Admin Portal</h1>
+            <p class="subtitle">Sign in to manage the wiki</p>
+        </div>
+
+        <form th:action="@{/login}" method="post" th:object="${loginForm}">
+            <label for="username">Username</label>
+
+            <input type="text" id="username" th:field="*{username}"
+                   placeholder="Enter your username" autocomplete="username" required>
+
+            <label for="password">Password</label>
+
+            <input type="password" id="password" th:field="*{password}"
+                   placeholder="Enter your password" autocomplete="current-password" required>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <p class="hint">Demo credentials: <strong>jingting</strong> / <strong>123</strong></p>
+    </main>
+</body>
+</html>
